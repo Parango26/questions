@@ -1,0 +1,24 @@
+type User {
+  name: String
+  lastName: String
+  email: String
+  totalPoints: Int
+  companyId: String
+}
+
+input CreateUserImput {
+  name: String!
+  lastName: String!
+  email: String!
+  totalPoints: Int
+  companyId: String!
+}
+
+type Mutation {
+  "Create User"
+  createUser(input: CreateUserImput!): User
+}
+
+type Query {
+  helloWorldUsers: String!
+}
